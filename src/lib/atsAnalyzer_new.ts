@@ -46,7 +46,7 @@ export class ATSAnalyzer {
     })
   }
 
-  private static calculateATSScore(matches: any[], resume: ResumeData, jobDescription: JobDescription): number {
+  private static calculateATSScore(matches: { skill: string; found: boolean; importance: string }[], resume: ResumeData, jobDescription: JobDescription): number {
     let totalWeight = 0
     let achievedWeight = 0
 
@@ -72,7 +72,7 @@ export class ATSAnalyzer {
     return Math.min(Math.round(score), 100)
   }
 
-  private static generateSuggestions(resume: ResumeData, jobDescription: JobDescription, matches: any[]): string[] {
+  private static generateSuggestions(resume: ResumeData, jobDescription: JobDescription, matches: { skill: string; found: boolean; importance: string }[]): string[] {
     const suggestions = []
     
     const missingHighImportance = matches.filter(m => !m.found && m.importance === 'high')
@@ -102,8 +102,8 @@ export class ATSAnalyzer {
     ).slice(0, 10) // Limit to 10 most important
   }
 
-  private static generateImprovements(resume: ResumeData, jobDescription: JobDescription, matches: any[]): any[] {
-    const improvements = []
+  private static generateImprovements(resume: ResumeData, jobDescription: JobDescription, matches: { skill: string; found: boolean; importance: string }[]): { section: string; suggestion: string; impact: "high" | "medium" | "low" }[] {
+    const improvements: { section: string; suggestion: string; impact: "high" | "medium" | "low" }[] = []
     
     const missingHighPriority = matches.filter(m => !m.found && m.importance === 'high')
     const missingMediumPriority = matches.filter(m => !m.found && m.importance === 'medium')
