@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     headers.set('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
     headers.set('Content-Disposition', `attachment; filename="${resumeData.sections?.personalInfo?.name || 'resume'}_optimized.docx"`)
 
-    return new NextResponse(wordBuffer, {
+    return new NextResponse(new Uint8Array(wordBuffer), {
       status: 200,
       headers
     })

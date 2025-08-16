@@ -292,7 +292,7 @@ export default function Home() {
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">ATS Analysis Complete!</h2>
               <p className="text-gray-600">
-                Here's your detailed ATS compatibility analysis and optimized resume download options.
+                Here&apos;s your detailed ATS compatibility analysis and optimized resume download options.
               </p>
               <button
                 onClick={resetProcess}

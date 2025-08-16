@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     headers.set('Content-Type', 'application/pdf')
     headers.set('Content-Disposition', `attachment; filename="${resumeData.sections?.personalInfo?.name || 'resume'}_optimized.pdf"`)
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(new Uint8Array(pdfBuffer), {
       status: 200,
       headers
     })
