@@ -1,0 +1,42 @@
+John Doe
+Email: john.doe@email.com
+Phone: (555) 123-4567
+Location: New York, NY
+LinkedIn: https://linkedin.com/in/johndoe
+
+PROFESSIONAL SUMMARY
+Experienced Software Engineer with 5+ years of developing web applications using JavaScript, React, and Node.js. Strong background in full-stack development, database design, and cloud deployment. Passionate about creating efficient, scalable solutions and collaborating with cross-functional teams.
+
+EXPERIENCE
+
+Senior Software Engineer | Tech Solutions Inc. | 2022 - Present
+• Developed and maintained React-based web applications serving 100,000+ users
+• Implemented RESTful APIs using Node.js and Express.js
+• Collaborated with product managers and designers to deliver user-focused features
+• Optimized application performance resulting in 40% faster load times
+• Mentored junior developers and conducted code reviews
+
+Software Engineer | Digital Innovations LLC | 2020 - 2022
+• Built responsive web applications using HTML, CSS, JavaScript, and React
+• Integrated third-party APIs and payment processing systems
+• Participated in agile development processes and sprint planning
+• Wrote comprehensive unit tests achieving 90% code coverage
+• Deployed applications to AWS cloud infrastructure
+
+Junior Developer | StartupXYZ | 2019 - 2020
+• Assisted in developing company website and internal tools
+• Fixed bugs and implemented minor feature enhancements
+• Learned modern development frameworks and best practices
+• Collaborated with senior developers on larger projects
+
+EDUCATION
+
+Bachelor of Science in Computer Science | University of Technology | 2015 - 2019
+GPA: 3.7/4.0
+
+SKILLS
+JavaScript, TypeScript, React, Node.js, Express.js, Python, HTML, CSS, SQL, MongoDB, PostgreSQL, AWS, Docker, Git, Agile, Scrum, RESTful APIs, GraphQL, Testing, CI/CD
+
+CERTIFICATIONS
+AWS Certified Solutions Architect - Associate (2023)
+Certified Scrum Master (2022)
