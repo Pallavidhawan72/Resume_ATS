@@ -126,7 +126,7 @@ export class DocumentGenerator {
     return Buffer.from(pdf.output('arraybuffer'))
   }
 
-  private static generatePDFFromSections(pdf: any, resumeData: ResumeData, addText: Function, yPosition: number) {
+  private static generatePDFFromSections(pdf: unknown, resumeData: ResumeData, addText: (text: string, fontSize?: number, isBold?: boolean, preserveSpacing?: boolean) => void, yPosition: number) {
     // Fallback method using extracted sections (previous implementation)
     
     // Add header
@@ -348,8 +348,8 @@ export class DocumentGenerator {
     return await Packer.toBuffer(doc)
   }
 
-  private static generateWordFromSections(resumeData: ResumeData): any[] {
-    const paragraphs: any[] = []
+  private static generateWordFromSections(resumeData: ResumeData): unknown[] {
+    const paragraphs: unknown[] = []
     
     // Header
     if (resumeData.sections.personalInfo?.name) {

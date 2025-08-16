@@ -30,7 +30,7 @@ export function ResumeComparison({
   const optimizedSummaryLength = optimizedResume.sections.summary?.length || 0
 
   // Get changes log if available
-  const changesLog = (optimizedResume as any).changesLog || []
+  const changesLog = (optimizedResume as { changesLog?: string[] }).changesLog || []
   const contentLengthDiff = (optimizedResume.content?.length || 0) - (originalResume.content?.length || 0)
 
   return (

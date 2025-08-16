@@ -103,7 +103,7 @@ export class ATSAnalyzer {
   }
 
   private static generateImprovements(resume: ResumeData, jobDescription: JobDescription, matches: any[]): any[] {
-    const improvements = []
+  const improvements: { section: string; suggestion: string; impact: string }[] = []
     
     const missingHighPriority = matches.filter(m => !m.found && m.importance === 'high')
     const missingMediumPriority = matches.filter(m => !m.found && m.importance === 'medium')
@@ -154,7 +154,7 @@ export class ATSAnalyzer {
     console.log('Missing skills:', missingSkills)
     
     let optimizedContent = resume.content
-    let changesLog: string[] = []
+  let changesLog: string[] = []
     
     try {
       // 1. ENHANCE PROFESSIONAL SUMMARY with job-relevant keywords
@@ -216,7 +216,7 @@ export class ATSAnalyzer {
 
   private static enhanceSummaryWithKeywords(content: string, jobDescription: JobDescription, changesLog: string[]): string {
     // Find professional summary section
-    const summaryMatch = content.match(/(PROFESSIONAL SUMMARY)([\s\S]*?)(?=\n\n[A-Z]|$)/i)
+  const summaryMatch = content.match(/(PROFESSIONAL SUMMARY)([\s\S]*?)(?=\n\n[A-Z]|$)/i)
     if (!summaryMatch) return content
     
     let summarySection = summaryMatch[0]
@@ -242,7 +242,7 @@ export class ATSAnalyzer {
 
   private static enhanceExperienceSection(content: string, jobDescription: JobDescription, changesLog: string[]): string {
     // Find experience sections and enhance bullet points
-    const experienceMatch = content.match(/(PROFESSIONAL EXPERIENCE|EXPERIENCE|WORK EXPERIENCE)([\s\S]*?)(?=\n\n[A-Z]|$)/i)
+  const experienceMatch = content.match(/(PROFESSIONAL EXPERIENCE|EXPERIENCE|WORK EXPERIENCE)([\s\S]*?)(?=\n\n[A-Z]|$)/i)
     if (!experienceMatch) return content
     
     let experienceSection = experienceMatch[0]
