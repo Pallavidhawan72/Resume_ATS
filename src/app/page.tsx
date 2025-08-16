@@ -5,7 +5,7 @@ import { FileUpload } from '@/components/FileUpload'
 import { JobDescriptionInput } from '@/components/JobDescriptionInput'
 import { ATSAnalysisDisplay } from '@/components/ATSAnalysisDisplay'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { FileText, Zap, Download, CheckCircle } from 'lucide-react'
+import { FileText, Zap, CheckCircle } from 'lucide-react'
 import { ResumeData, ATSAnalysis } from '@/types/resume'
 
 export default function Home() {
